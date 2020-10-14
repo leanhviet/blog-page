@@ -1,6 +1,25 @@
+// Libs
 import React from 'react'
-import './App.css'
+import { BrowserRouter as Router } from 'react-router-dom'
+import { Provider } from 'react-redux'
 
-const App = () => <div className="App">Home</div>
+// Main layout
+import MainLayout from './pages'
+
+// Store
+import { store } from './store'
+
+// Stylesheet
+import 'bootstrap/dist/css/bootstrap.min.css'
+
+const App = () => (
+  <div className="App">
+    <Provider store={store}>
+      <Router>
+        <MainLayout />
+      </Router>
+    </Provider>
+  </div>
+)
 
 export default App

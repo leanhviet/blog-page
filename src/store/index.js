@@ -20,7 +20,10 @@ if (process.env.NODE_ENV === 'development') {
 // create a redux store with our reducer above and middleware
 export const store = createStore(
   rootReducer,
-  compose(applyMiddleware(...middlewares)),
+  compose(
+    applyMiddleware(...middlewares),
+    window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
+  ),
 )
 
 // run the saga

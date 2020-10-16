@@ -1,0 +1,30 @@
+.btn {
+  display: inline-block;
+  padding: pxToRem(5px) pxToRem(10px);
+  cursor: pointer;
+  color: $white;
+  border: none;
+  border-radius: pxToRem(4px);
+
+  text: {
+    align: center;
+    transform: uppercase;
+  }
+
+  font: {
+    family: $font-libre-baskerville;
+    size: 14px;
+  }
+
+  &--danger {
+    background-color: $red;
+  }
+
+  &--success {
+    background-color: $aqua-forest;
+  }
+
+  &--warning {
+    background-color: $sunglow;
+  }
+}

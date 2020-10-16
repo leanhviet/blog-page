@@ -1,4 +1,15 @@
+@import './components/FeatureGroup/styles';
+@import './components/BlogItem/styles.scss';
+
 .home {
   padding: 15px;
   background-color: #fff;
+
+  & .feature {
+    margin-bottom: 40px;
+  }
+
+  & .pagination {
+    justify-content: flex-end;
+  }
 }

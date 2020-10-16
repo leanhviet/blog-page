@@ -1,66 +1,117 @@
 // Libs
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
-import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types'
+import { Container } from 'react-bootstrap'
 
 // Reducers
-import { Container, Row, Col } from 'react-bootstrap'
 import { Creators } from './redux/blogs'
 
 // Components
+import Pagination from '../../components/Pagination'
+import Header from '../../components/Header'
+import FeatureGroup from './components/FeatureGroup'
+import BlogItem from './components/BlogItem'
 
-const Home = ({ getBlogsRequest, mainData }) => {
-  const { blogs } = mainData
+const Home = ({ getBlogsRequest, getTotalRecordsRequest, mainData }) => {
+  const { totalRecords, blogs } = mainData
+
+  const [param, setParam] = useState({
+    page: 1,
+    limit: 3,
+    option: {},
+  })
 
   useEffect(() => {
-    getBlogsRequest()
-  }, [getBlogsRequest])
+    // Get total records
+    getTotalRecordsRequest(param.option?.search)
+  }, [param.option, param.option.search, getTotalRecordsRequest])
+
+  useEffect(() => {
+    const { page, limit, option } = param
+
+    const params = {
+      page,
+      limit,
+      ...option,
+    }
+
+    // Get list blogs by current page and limit
+    getBlogsRequest(params)
+  }, [param, param.option, getBlogsRequest])
+
+  const onChangePage = (data) => {
+    setParam({
+      ...param,
+      page: data.page,
+      limit: data.pageLimit,
+    })
+  }
+
+  const handleSearch = (text) => {
+    setParam({
+      ...param,
+      page: 1,
+      option: {
+        search: text,
+      },
+    })
+  }
+
+  const handleSortBy = (fieldChoosen, order) => {
+    setParam({
+      ...param,
+      page: 1,
+      option: {
+        ...param.option,
+        sortBy: fieldChoosen,
+        order,
+      },
+    })
+  }
 
   return (
     <Container className="border home">
-      {blogs
-        && blogs.map((item) => (
-          <Row key={item.id}>
-            <Col xs={5} sm={2}>
-              <img
-                src="https://dummyimage.com/150x150/5a5a5a/ffffff"
-                alt={item.title}
-                className="img-thumbnail"
-                width="150px"
-                height="150px"
-              />
-            </Col>
-            <Col xs={7} sm={10}>
-              <h4 className="text-primary">
-                <Link className="link" to={`/${item.id}`}>
-                  {item.title}
-                </Link>
-              </h4>
-              <p>{item.content}</p>
-            </Col>
-          </Row>
-        ))}
+      <Header />
+      <FeatureGroup handleSearch={handleSearch} handleSortBy={handleSortBy} />
+      {blogs?.map((blog) => (
+        <BlogItem key={blog.id} blog={blog} />
+      ))}
+      {!!totalRecords && (
+        <Pagination
+          totalRecords={totalRecords}
+          pageLimit={param.limit || 3}
+          initialPage={param.page || 1}
+          pagesToShow={3}
+          onChangePage={onChangePage}
+        />
+      )}
     </Container>
   )
 }
 
 Home.defaultProps = {
   getBlogsRequest: () => {},
+  getTotalRecordsRequest: () => {},
   mainData: {
     blogs: [],
+    totalRecords: 0,
   },
 }
 
 Home.propTypes = {
   getBlogsRequest: PropTypes.func,
+  getTotalRecordsRequest: PropTypes.func,
   mainData: PropTypes.shape({
-    blogs: PropTypes.arrayOf({
-      id: PropTypes.string,
-      content: PropTypes.string,
-      title: PropTypes.string,
-    }),
+    blogs: PropTypes.arrayOf(
+      PropTypes.shape({
+        id: PropTypes.string,
+        content: PropTypes.string,
+        title: PropTypes.string,
+      }),
+    ),
+    totalRecords: PropTypes.number,
   }),
 }
 

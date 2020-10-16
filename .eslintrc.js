@@ -51,7 +51,11 @@ module.exports = {
     'import/prefer-default-export': 0,
     'no-param-reassign': 0,
     'import/no-unresolved': 0,
-    camelcase: 0
+    camelcase: 0,
+    'react/no-unescaped-entities': 0,
+    'react/forbid-prop-types': 0,
+    'prefer-const': 0,
+    'react/no-array-index-key': 0
   },
   parser: 'babel-eslint'
 }

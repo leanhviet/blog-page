@@ -1,0 +1,13 @@
+.main-header {
+  text-align: center;
+  padding: 115px 0;
+
+  &__title {
+    font-weight: 800;
+    text-transform: capitalize;
+  }
+
+  &__desc {
+    font-size: larger;
+  }
+}

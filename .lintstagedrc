@@ -1,0 +1,17 @@
+{
+  "{src/**/*.js": [
+    "prettier --write",
+    "pretty-quick --staged",
+    "git add"
+  ],
+  "{src,__tests__,stories}/**/*.{js,jsx}": [
+    "prettier --write",
+    "pretty-quick --staged",
+    "eslint --fix",
+    "git add"
+  ],
+  "*.{png,jpeg,jpg,gif,svg}": [
+    "imagemin-lint-staged",
+    "git add"
+  ]
+}

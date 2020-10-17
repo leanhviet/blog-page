@@ -1,0 +1,9 @@
+.detail {
+  padding: 15px;
+  height: 100vh;
+  background-color: $white;
+
+  & h1 {
+    text-transform: capitalize;
+  }
+}

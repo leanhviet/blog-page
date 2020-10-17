@@ -1,0 +1,21 @@
+.feature {
+  display: flex;
+  justify-content: space-between;
+
+  &__btn {
+    display: flex;
+
+    & .dropdown {
+      width: 200px;
+      margin-right: 20px;
+    }
+
+    & .btn {
+      margin-right: 10px;
+    }
+  }
+
+  &__search {
+    width: 400px;
+  }
+}

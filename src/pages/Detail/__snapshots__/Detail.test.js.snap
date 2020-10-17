@@ -1,0 +1,79 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DetailBase component should be render snapshot DetailBase component 1`] = `
+<Container
+  className="border detail"
+  fluid={false}
+>
+  <h1
+    className="mt-4"
+  />
+  <p
+    className="lead"
+  >
+    by
+     
+    <a
+      href="/"
+    >
+      Start Bootstrap
+    </a>
+  </p>
+  <hr />
+  <p>
+    Posted on
+    Invalid date
+  </p>
+  <hr />
+  <img
+    alt=""
+    className="img-fluid rounded"
+    src="http://placehold.it/900x300"
+  />
+  <hr />
+  <p
+    className="lead detail__content"
+  />
+</Container>
+`;
+
+exports[`DetailBase component should be render snapshot DetailBase component 2`] = `
+<Container
+  className="border detail"
+  fluid={false}
+>
+  <h1
+    className="mt-4"
+  >
+    Title
+  </h1>
+  <p
+    className="lead"
+  >
+    by
+     
+    <a
+      href="/"
+    >
+      Start Bootstrap
+    </a>
+  </p>
+  <hr />
+  <p>
+    Posted on
+    Invalid date
+  </p>
+  <hr />
+  <img
+    alt="Title"
+    className="img-fluid rounded"
+    src="http://placehold.it/900x300"
+  />
+  <hr />
+  <p
+    className="lead detail__content"
+  >
+    This is content
+  </p>
+</Container>
+`;

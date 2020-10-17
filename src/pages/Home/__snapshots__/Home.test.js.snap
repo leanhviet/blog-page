@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HomeBase component should be render snapshot HomeBase component 1`] = `
+<Container
+  className="border home"
+  fluid={false}
+>
+  <HeaderBase />
+  <Memo(FeatureGroupBase)
+    handleSearch={[Function]}
+    handleSortBy={[Function]}
+  />
+</Container>
+`;
+
+exports[`HomeBase component should be render snapshot HomeBase component 2`] = `
+<Container
+  className="border home"
+  fluid={false}
+>
+  <HeaderBase />
+  <Memo(FeatureGroupBase)
+    handleSearch={[Function]}
+    handleSortBy={[Function]}
+  />
+  <Memo(BlogItemBase)
+    blog={
+      Object {
+        "content": "This is content",
+        "id": 1,
+        "title": "Title",
+      }
+    }
+    key="1"
+  />
+  <Memo(BlogItemBase)
+    blog={
+      Object {
+        "content": "This is content 2",
+        "id": 2,
+        "title": "Title 2",
+      }
+    }
+    key="2"
+  />
+  <Memo(PaginationBase)
+    initialPage={1}
+    onChangePage={[Function]}
+    pageLimit={3}
+    pagesToShow={3}
+    totalRecords={30}
+  />
+</Container>
+`;

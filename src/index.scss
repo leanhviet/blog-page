@@ -1,0 +1,11 @@
+@import './styles/all';
+
+// Components
+@import './components/Header/styles';
+@import './components/Input/styles';
+@import './components/Pagination/styles';
+@import './components/Footer/styles';
+
+// Pages
+@import './pages/Home/index.scss';
+@import './pages/Detail/index.scss';

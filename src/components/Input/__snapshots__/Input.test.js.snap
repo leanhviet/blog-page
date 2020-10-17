@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InputBase component should be render snapshot InputBase component 1`] = `
+<div
+  className="input-group"
+>
+  <div
+    className="input-group__field"
+  >
+    <input
+      className="input-group__field__text  "
+      onChange={[Function]}
+      placeholder=""
+      type="text"
+      value=""
+    />
+  </div>
+</div>
+`;
+
+exports[`InputBase component should be render snapshot InputBase component 2`] = `
+<div
+  className="input-group"
+>
+  <div
+    className="input-group__field"
+  >
+    <input
+      className="input-group__field__text  input"
+      onChange={[Function]}
+      placeholder="Search..."
+      type="text"
+      value="Search"
+    />
+  </div>
+</div>
+`;

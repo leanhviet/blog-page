@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FeatureGroupBase component should be render snapshot FeatureGroupBase component 1`] = `
+<div
+  className="feature"
+>
+  <div
+    className="feature__btn"
+  >
+    <Memo(DropdownBase)
+      className="dropdown"
+      onChange={[Function]}
+      options={
+        Array [
+          Object {
+            "name": "All",
+            "value": "",
+          },
+          Object {
+            "name": "Content",
+            "value": "content",
+          },
+          Object {
+            "name": "Title",
+            "value": "title",
+          },
+          Object {
+            "name": "Create At",
+            "value": "createdAt",
+          },
+        ]
+      }
+    />
+    <div>
+      <Memo(ButtonBase)
+        className="btn btn-primary"
+        label="Desc"
+        onClick={[Function]}
+      />
+      <Memo(ButtonBase)
+        className="btn btn-primary"
+        label="Asc"
+        onClick={[Function]}
+      />
+    </div>
+  </div>
+  <div
+    className="feature__search"
+  >
+    <Memo(InputBase)
+      className="form-control"
+      handleChange={[Function]}
+      placeholder="Search..."
+      type="text"
+    />
+  </div>
+</div>
+`;

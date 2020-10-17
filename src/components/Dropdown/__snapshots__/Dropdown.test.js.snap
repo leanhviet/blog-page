@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DropdownBase component should be render snapshot DropdownBase component 1`] = `
+<select
+  className="custom-select "
+  onChange={[Function]}
+>
+  <option
+    key="opt"
+    value=""
+  />
+</select>
+`;
+
+exports[`DropdownBase component should be render snapshot DropdownBase component 2`] = `
+<select
+  className="custom-select dropdown"
+  onChange={[Function]}
+>
+  <option
+    key="optall"
+    value="all"
+  >
+    All
+  </option>
+</select>
+`;

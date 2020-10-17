@@ -1,68 +1,71 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Testing
 
-## Available Scripts
+- Basic blog page.
 
-In the project directory, you can run:
+## Timeline
 
-### `yarn start`
+- 3 days (15th Oct 2020 - 17th Oct 2020).
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Team size
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+- 1 developer.
 
-### `yarn test`
+## Expectation
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Good project structure
+- Checker with eslint or tslint
+- Good format and naming convention
+- It will be a good component design (container, smart components, dump components)
+- It will be good to use: redux, redux-saga
 
-### `yarn build`
+## Technologies
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- ReactJS.
+- SASS.
+- Bootstrap 4.5.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+## Libs
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Axios - Promise based HTTP client for the browser and node.js [here](https://github.com/axios/axios).
+- Bootstrap - The most popular HTML, CSS, and JavaScript framework for developing responsive, mobile first projects on the web [here](https://getbootstrap.com/docs/4.5/).
+- Moment - Parse, validate, manipulate, and display dates in javascript [here](https://momentjs.com/).
+- React-redux - A Predictable State Container for JS Apps [here](https://redux.js.org/).
+- React-router - Declarative routing for React [here](https://reacttraining.com/react-router/web/guides/quick-start).
+- React-router-dom - DOM bindings for React Router [here](https://reacttraining.com/react-router/web/guides/quick-start).
+- Redux-saga - An alternative side effect model for Redux apps [here](https://redux-saga.js.org/).
+- Reduxsauce [here](https://github.com/infinitered/reduxsauce/).
+- Seamless-immutable - Immutable data structures for JavaScript which are backwards-compatible with normal JS Arrays and Objects. [here](https://github.com/rtfeldman/seamless-immutable/).
 
-### `yarn eject`
+## Editor
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- [Visual Studio Code](https://code.visualstudio.com/).
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Directory structure
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```markdown
+.
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Guideline
 
-## Learn More
+- Clone project: `git@github.com:leanhviet/blog-page.git`.
+- Checkout to develop branch: `git checkout develop`.
+- Install npm: `yarn install`.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### How to run app
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- `yarn start`
 
-### Code Splitting
+### Test app with Jest, Enzyme and snapshot
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+- `yarn test` or `yarn test:coverage`
 
-### Analyzing the Bundle Size
+## Feature
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+- List of articles with pagination, sort, search 
 
-### Making a Progressive Web App
+## Questions
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+## Author
 
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Viet Le

@@ -26,15 +26,15 @@
 
 ## Libs
 
-- Axios [here](https://github.com/axios/axios).
-- Bootstrap [here](https://getbootstrap.com/docs/4.5/).
-- Moment [here](https://momentjs.com/).
-- React-redux [here](https://redux.js.org/).
-- React-router [here](https://reacttraining.com/react-router/web/guides/quick-start).
-- React-router-dom [here](https://reacttraining.com/react-router/web/guides/quick-start).
-- Redux-saga [here](https://redux-saga.js.org/).
+- Axios - Promise based HTTP client for the browser and node.js [here](https://github.com/axios/axios).
+- Bootstrap - The most popular HTML, CSS, and JavaScript framework for developing responsive, mobile first projects on the web [here](https://getbootstrap.com/docs/4.5/).
+- Moment - Parse, validate, manipulate, and display dates in javascript [here](https://momentjs.com/).
+- React-redux - A Predictable State Container for JS Apps [here](https://redux.js.org/).
+- React-router - Declarative routing for React [here](https://reacttraining.com/react-router/web/guides/quick-start).
+- React-router-dom - DOM bindings for React Router [here](https://reacttraining.com/react-router/web/guides/quick-start).
+- Redux-saga - An alternative side effect model for Redux apps [here](https://redux-saga.js.org/).
 - Reduxsauce [here](https://github.com/infinitered/reduxsauce/).
-- Seamless-immutable [here](https://github.com/rtfeldman/seamless-immutable/).
+- Seamless-immutable - Immutable data structures for JavaScript which are backwards-compatible with normal JS Arrays and Objects. [here](https://github.com/rtfeldman/seamless-immutable/).
 
 ## Editor
 

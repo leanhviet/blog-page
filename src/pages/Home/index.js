@@ -25,7 +25,7 @@ const Home = ({ getBlogsRequest, getTotalRecordsRequest, mainData }) => {
 
   useEffect(() => {
     // Get total records
-    getTotalRecordsRequest(param.option?.search)
+    getTotalRecordsRequest(param.option)
   }, [param.option, param.option.search, getTotalRecordsRequest])
 
   useEffect(() => {

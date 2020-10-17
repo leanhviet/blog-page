@@ -1,0 +1,9 @@
+.page-footer {
+  background-color: #1c2331;
+
+  & .footer-copyright {
+    overflow: hidden;
+    color: $white;
+    background-color: rgba(0, 0, 0, 0.2);
+  }
+}

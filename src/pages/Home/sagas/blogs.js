@@ -14,7 +14,7 @@ import { getAPI } from '../../../api'
  * worker saga for fetching data from home page
  * @param {Object} action | contain action type and param by request
  */
-export function* getBlogs(action) {
+export function* getBlogsWorker(action) {
   try {
     // get list blogs by params
     const getBlogs = yield getAPI(BLOGS_URL, action?.param)
@@ -39,7 +39,7 @@ export function* getBlogs(action) {
  * worker saga for get total records from home page
  * @param {Object} action | contain action type and param by request
  */
-export function* getTotalRecords(action) {
+export function* getTotalRecordsWorker(action) {
   try {
     // get list blogs
     const getBlogs = yield getAPI(BLOGS_URL, action?.option)
@@ -61,9 +61,9 @@ export function* getTotalRecords(action) {
 }
 
 export function* getTotalRecordsSaga() {
-  yield takeLatest(Types.GET_TOTAL_RECORDS_REQUEST, getTotalRecords)
+  yield takeLatest(Types.GET_TOTAL_RECORDS_REQUEST, getTotalRecordsWorker)
 }
 
 export function* getBlogsSaga() {
-  yield takeLatest(Types.GET_BLOGS_REQUEST, getBlogs)
+  yield takeLatest(Types.GET_BLOGS_REQUEST, getBlogsWorker)
 }

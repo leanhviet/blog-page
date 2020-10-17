@@ -1,7 +1,7 @@
 // Libs
 import React from 'react'
 
-const Header = () => (
+const HeaderBase = () => (
   <header className="jumbotron">
     <div className="container">
       <h1 className="display-4">Blog page</h1>
@@ -14,4 +14,4 @@ const Header = () => (
   </header>
 )
 
-export default Header
+export default HeaderBase

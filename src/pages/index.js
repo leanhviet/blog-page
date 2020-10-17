@@ -1,14 +1,18 @@
 // Libs
 import React, { Suspense } from 'react'
-import { withRouter } from 'react-router-dom'
 
 // Routers
 import AppRouter from '../router'
 
+// Layout
+import Layout from '../layout'
+
 const Pages = () => (
-  <Suspense fallback="Loading...">
-    <AppRouter />
-  </Suspense>
+  <Layout>
+    <Suspense fallback="Loading...">
+      <AppRouter />
+    </Suspense>
+  </Layout>
 )
 
-export default withRouter(Pages)
+export default Pages

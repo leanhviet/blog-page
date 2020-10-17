@@ -2,10 +2,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const DropdownBase = ({ onChange, options, className }) => (
+export const DropdownBase = ({ onChange, options, className }) => (
   <select
     className={`custom-select ${className}`}
-    onChange={(event) => onChange(event.target.value)}
+    onChange={(event) => onChange(event.target?.value)}
   >
     {options?.map((item) => (
       <option key={`opt${item.value}`} value={item.value}>

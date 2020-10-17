@@ -2,7 +2,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const ButtonBase = ({
+export const ButtonBase = ({
   label, className, onClick, disabled,
 }) => (
   <button

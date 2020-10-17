@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button component should be render snapshot Button component 1`] = `
+<button
+  className=""
+  disabled={false}
+  onClick={[Function]}
+  type="button"
+/>
+`;
+
+exports[`Button component should be render snapshot Button component 2`] = `
+<button
+  className="btn"
+  disabled={false}
+  onClick={[MockFunction]}
+  type="button"
+>
+  Create a blog
+</button>
+`;

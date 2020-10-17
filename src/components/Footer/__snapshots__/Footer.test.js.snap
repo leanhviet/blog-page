@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FooterBase component should be render snapshot FooterBase component 1`] = `
+<footer
+  className="page-footer unique-color-dark"
+>
+  <div
+    className="footer-copyright py-3 text-center"
+  >
+    <p>
+      © 2020 Copyright: Viet Le
+    </p>
+  </div>
+</footer>
+`;

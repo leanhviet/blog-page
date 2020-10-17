@@ -14,7 +14,11 @@ import Header from '../../components/Header'
 import FeatureGroup from './components/FeatureGroup'
 import BlogItem from './components/BlogItem'
 
-const Home = ({ getBlogsRequest, getTotalRecordsRequest, mainData }) => {
+export const HomeBase = ({
+  getBlogsRequest,
+  getTotalRecordsRequest,
+  mainData,
+}) => {
   const { totalRecords, blogs } = mainData
 
   const [param, setParam] = useState({
@@ -91,7 +95,7 @@ const Home = ({ getBlogsRequest, getTotalRecordsRequest, mainData }) => {
   )
 }
 
-Home.defaultProps = {
+HomeBase.defaultProps = {
   getBlogsRequest: () => {},
   getTotalRecordsRequest: () => {},
   mainData: {
@@ -100,7 +104,7 @@ Home.defaultProps = {
   },
 }
 
-Home.propTypes = {
+HomeBase.propTypes = {
   getBlogsRequest: PropTypes.func,
   getTotalRecordsRequest: PropTypes.func,
   mainData: PropTypes.shape({
@@ -119,4 +123,4 @@ const mapStateToProps = (state) => ({ ...state })
 
 const mapDispatchToProps = (dispatch) => bindActionCreators({ ...Creators }, dispatch)
 
-export default connect(mapStateToProps, mapDispatchToProps)(Home)
+export default connect(mapStateToProps, mapDispatchToProps)(HomeBase)

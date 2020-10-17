@@ -17,7 +17,7 @@ const initPagination = {
   pagesToShow: '',
 }
 
-const PaginationBase = ({
+export const PaginationBase = ({
   totalRecords,
   pageLimit,
   pagesToShow,

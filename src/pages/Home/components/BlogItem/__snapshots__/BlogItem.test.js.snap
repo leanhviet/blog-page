@@ -1,0 +1,72 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BlogItemBase component should be render snapshot BlogItemBase component 1`] = `
+<Row
+  className="blog-item"
+  noGutters={false}
+>
+  <Col
+    className="blog-item__wrapper-image"
+    sm={2}
+    xs={5}
+  >
+    <img
+      className="img-thumbnail"
+      src="https://dummyimage.com/150x150/5a5a5a/ffffff"
+    />
+  </Col>
+  <Col
+    className="blog-item__content"
+    sm={10}
+    xs={7}
+  >
+    <h4
+      className="text-primary"
+    >
+      <Link
+        className="link"
+        to="/undefined"
+      />
+    </h4>
+    <p />
+  </Col>
+</Row>
+`;
+
+exports[`BlogItemBase component should be render snapshot BlogItemBase component 2`] = `
+<Row
+  className="blog-item"
+  noGutters={false}
+>
+  <Col
+    className="blog-item__wrapper-image"
+    sm={2}
+    xs={5}
+  >
+    <img
+      alt="Title"
+      className="img-thumbnail"
+      src="https://dummyimage.com/150x150/5a5a5a/ffffff"
+    />
+  </Col>
+  <Col
+    className="blog-item__content"
+    sm={10}
+    xs={7}
+  >
+    <h4
+      className="text-primary"
+    >
+      <Link
+        className="link"
+        to="/1"
+      >
+        Title
+      </Link>
+    </h4>
+    <p>
+      This is content
+    </p>
+  </Col>
+</Row>
+`;

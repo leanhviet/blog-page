@@ -27,7 +27,7 @@ const options = [
   },
 ]
 
-const FeatureGroup = ({ handleSearch, handleSortBy }) => {
+export const FeatureGroupBase = ({ handleSearch, handleSortBy }) => {
   const [fieldChoosen, setFieldChoosen] = useState('')
 
   const handleChange = (value) => {
@@ -67,14 +67,14 @@ const FeatureGroup = ({ handleSearch, handleSortBy }) => {
   )
 }
 
-FeatureGroup.defaultProps = {
+FeatureGroupBase.defaultProps = {
   handleSearch: () => {},
   handleSortBy: () => {},
 }
 
-FeatureGroup.propTypes = {
+FeatureGroupBase.propTypes = {
   handleSearch: PropTypes.func,
   handleSortBy: PropTypes.func,
 }
 
-export default React.memo(FeatureGroup)
+export default React.memo(FeatureGroupBase)

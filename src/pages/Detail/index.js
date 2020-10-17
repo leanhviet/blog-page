@@ -10,7 +10,7 @@ import PropTypes from 'prop-types'
 // Reducers
 import { Creators } from './redux/blog'
 
-const Detail = ({ getBlogByIdRequest, blogData, match }) => {
+export const DetailBase = ({ getBlogByIdRequest, blogData, match }) => {
   const { blog } = blogData
   const { title, content, createdAt } = blog || ''
 
@@ -40,12 +40,12 @@ const Detail = ({ getBlogByIdRequest, blogData, match }) => {
         alt={title}
       />
       <hr />
-      <p className="lead">{content}</p>
+      <p className="lead detail__content">{content}</p>
     </Container>
   )
 }
 
-Detail.defaultProps = {
+DetailBase.defaultProps = {
   getBlogByIdRequest: () => {},
   blogData: {
     blog: {
@@ -54,15 +54,20 @@ Detail.defaultProps = {
       createdAt: '',
     },
   },
+  match: {
+    params: {
+      id: '1',
+    },
+  },
 }
 
-Detail.propTypes = {
+DetailBase.propTypes = {
   getBlogByIdRequest: PropTypes.func,
   blogData: PropTypes.shape({
     blog: PropTypes.shape({
-      id: PropTypes.string,
       content: PropTypes.string,
       title: PropTypes.string,
+      createdAt: PropTypes.string,
     }),
   }),
   match: PropTypes.shape({
@@ -76,4 +81,6 @@ const mapStateToProps = (state) => ({ ...state })
 
 const mapDispatchToProps = (dispatch) => bindActionCreators({ ...Creators }, dispatch)
 
-export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Detail))
+export default withRouter(
+  connect(mapStateToProps, mapDispatchToProps)(DetailBase),
+)

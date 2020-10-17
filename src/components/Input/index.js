@@ -2,7 +2,7 @@
 import React, { useState, createRef } from 'react'
 import PropTypes from 'prop-types'
 
-const InputBase = ({
+export const InputBase = ({
   type,
   label,
   defaultValue,

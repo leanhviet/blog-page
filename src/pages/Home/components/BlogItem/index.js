@@ -6,7 +6,7 @@ import PropTypes from 'prop-types'
 // Components
 import { Row, Col } from 'react-bootstrap'
 
-const BlogItem = ({ blog }) => (
+export const BlogItemBase = ({ blog }) => (
   <Row className="blog-item">
     <Col xs={5} sm={2} className="blog-item__wrapper-image">
       <img
@@ -26,11 +26,11 @@ const BlogItem = ({ blog }) => (
   </Row>
 )
 
-BlogItem.defaultProps = {
+BlogItemBase.defaultProps = {
   blog: {},
 }
 
-BlogItem.propTypes = {
+BlogItemBase.propTypes = {
   blog: PropTypes.shape({
     id: PropTypes.string,
     content: PropTypes.string,
@@ -38,4 +38,4 @@ BlogItem.propTypes = {
   }),
 }
 
-export default React.memo(BlogItem)
+export default React.memo(BlogItemBase)
